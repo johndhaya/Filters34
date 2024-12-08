@@ -1,0 +1,130 @@
+.filters-group-container {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-group-container {
+    width: 30%;
+    max-width: 350px;
+    margin-top: 48px;
+    flex-shrink: 0;
+  }
+}
+
+.search-input-cont {
+  display: flex;
+  align-items: center;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+}
+
+.search-input {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #475569;
+}
+.cat-head {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 24px;
+  color: #12022f;
+}
+@media screen and (min-width: 768px) {
+  .cat-head {
+    margin-top: 32px;
+  }
+  .cat-item {
+    margin-top: 24px;
+  }
+  .cat-name {
+    font-size: 18px;
+  }
+}
+.cat-list {
+  padding-left: 0;
+}
+.cat-item {
+  margin-top: 16px;
+  cursor: pointer;
+  list-style-type: none;
+}
+.cat-name {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #64748b;
+}
+.active-cat-name {
+  color: #0967d2;
+}
+.rat-head {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  color: #12022f;
+}
+.rat-list {
+  padding-left: 0px;
+}
+.rat-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.rat-img {
+  max-width: 152px;
+  height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .rat-img {
+    height: 24px;
+  }
+  .and-up {
+    font-size: 18px;
+    margin-left: 14px;
+  }
+  .clear-filters-btn {
+    font-size: 14px;
+    margin-top: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.and-up {
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #64748b;
+}
+.active-rat {
+  color: #0967d2;
+}
+
+.clear-filters-btn {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #0967d2;
+  padding: 8px 12px 8px 12px;
+  margin-top: 16px;
+  border: 1px solid #0967d2;
+  border-radius: 4px;
+  outline: none;
+}
