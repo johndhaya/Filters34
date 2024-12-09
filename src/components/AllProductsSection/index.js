@@ -91,8 +91,12 @@ class AllProductsSection extends Component {
       apiStatus: apiStatusConstants.inProgress,
     })
     const jwtToken = Cookies.get('jwt_token')
-    const {activeOptionId, activeCategoryId, activeRatingId, searchInput} =
-      this.state
+    const {
+      activeOptionId,
+      activeCategoryId,
+      activeRatingId,
+      searchInput,
+    } = this.state
     const apiUrl = `https://apis.ccbp.in/products?sort_by=${activeOptionId}&category=${activeCategoryId}&title_search=${searchInput}&rating=${activeRatingId}`
     const options = {
       headers: {Authorization: `Bearer ${jwtToken}`},
@@ -106,7 +110,7 @@ class AllProductsSection extends Component {
         brand: product.brand,
         price: product.price,
         id: product.id,
-        imageUrl: product.img_url,
+        imageUrl: product.image_url,
         rating: product.rating,
       }))
       this.setState({
@@ -209,7 +213,11 @@ class AllProductsSection extends Component {
     this.setState({activeCategoryId}, this.getProducts)
   }
 
-  enterSearhcInput = searchInput => {
+  enterSearchInput = searchInput => {
+    this.setState({searchInput})
+  }
+
+  changeSearchInput = searchInput => {
     this.setState({searchInput})
   }
 
@@ -223,7 +231,7 @@ class AllProductsSection extends Component {
           categoryOptions={categoryOptions}
           ratingsList={ratingsList}
           changeSearchInput={this.changeSearchInput}
-          enterSearhcInput={this.enterSearhcInput}
+          enterSearchInput={this.enterSearchInput}
           activeCategoryId={activeCategoryId}
           activeRatingId={activeRatingId}
           changeCategory={this.changeCategory}
